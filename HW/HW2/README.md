@@ -1,1 +1,4 @@
-doc/writeup.md
+README
+======
+
+## Checkout the [Writeup](doc/writeup.md) ##
