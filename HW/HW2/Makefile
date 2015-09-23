@@ -9,6 +9,7 @@ VCDS := $(patsubst $(SRCDIR)/%.$(SRCEXT), $(BUILDDIR)/%.$(VCDEXT), $(SOURCES))
 all: $(TARGETS)
 
 $(BUILDDIR)/%: $(SRCDIR)/%.$(SRCEXT)
+	mkdir -p $(BUILDDIR)
 	iverilog $< -o $@ 
 
 test: $(VCDS)
