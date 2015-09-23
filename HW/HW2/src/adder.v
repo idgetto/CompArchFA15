@@ -43,7 +43,7 @@ module testFullAdder;
     structuralFullAdder adder (sum, carryout, a, b, carryin);
 
     initial begin
-        $dumpfile("adder.vcd");
+        $dumpfile("build/adder.vcd");
         $dumpvars(0, testFullAdder);
 
         $display("a  b carryin | carryout sum | Expected Output");

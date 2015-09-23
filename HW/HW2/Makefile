@@ -1,17 +1,19 @@
 SRCEXT := v
+SRCDIR := src
+BUILDDIR := build
 VCDEXT := vcd
-SOURCES := $(shell find . -type f -name "*.$(SRCEXT)")
-TARGETS := $(patsubst %.$(SRCEXT), %, $(SOURCES))
-VCDS := $(patsubst %.$(SRCEXT), %.$(VCDEXT), $(SOURCES))
+SOURCES := $(shell find $(SRCDIR) -type f -name "*.$(SRCEXT)")
+TARGETS := $(patsubst $(SRCDIR)/%.$(SRCEXT), $(BUILDDIR)/%, $(SOURCES))
+VCDS := $(patsubst $(SRCDIR)/%.$(SRCEXT), $(BUILDDIR)/%.$(VCDEXT), $(SOURCES))
 
 all: $(TARGETS)
 
-%: %.$(SRCEXT)
+$(BUILDDIR)/%: $(SRCDIR)/%.$(SRCEXT)
 	iverilog $< -o $@ 
 
 test: $(VCDS)
 
-%.$(VCDEXT): %
+$(BUILDDIR)/%.$(VCDEXT): $(BUILDDIR)/%
 	vvp $<
 
 clean: 

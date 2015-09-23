@@ -68,7 +68,7 @@ module testMultiplexer;
     structuralMultiplexer multi (out, address0, address1, in0, in1, in2, in3);
 
     initial begin
-        $dumpfile("multiplexer.vcd");
+        $dumpfile("build/multiplexer.vcd");
         $dumpvars(0, testMultiplexer);
 
         $display("address0 address1 in0 in1 in2 in3 | out | Expected Output");
