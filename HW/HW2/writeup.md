@@ -19,7 +19,7 @@
 | 1 | 1 |    0    |     1    |  0  |         1         |       0      |
 | 1 | 1 |    1    |     1    |  1  |         1         |       1      |
 
-![Adder Waveform](./adder-wave.png)
+![Adder Waveform](./img/adder-wave.png)
 
 ### Decoder ###
 
@@ -34,7 +34,7 @@
 | 1  | 0  | 1  | 0  | 0  | 1  | 0 | O2 Only         |
 | 1  | 1  | 1  | 0  | 0  | 0  | 1 | O3 Only         |
 
-![Decoder Waveform](./decoder-wave.png)
+![Decoder Waveform](./img/decoder-wave.png)
 
 ### Multiplexer ###
 
@@ -105,4 +105,4 @@
 |    1     |    1     |  1  |  1  |  1  |  0  |  0  |         0       |
 |    1     |    1     |  1  |  1  |  1  |  1  |  1  |         1       |
 
-![Multiplexer Waveform](./multiplexer-wave.png)
+![Multiplexer Waveform](./img/multiplexer-wave.png)
