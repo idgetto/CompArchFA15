@@ -31,27 +31,29 @@ wire in0_out;
 `AND(nAddr0_and_nAddr1, nAddr0, nAddr1);
 `AND(in0_out, in0, nAddr0_and_nAddr1);
 
-//// use in1
-//// in1 * address0 * ~address1
+// in1
+// in1 * address0 * ~address1
 wire addr0_and_nAddr1;
 wire in1_out;
 `AND(addr0_and_nAddr1, address0, nAddr1);
 `AND(in1_out, in1, addr0_and_nAddr1);
-//
-//// use in2
-//// in2 * ~address0 * address1
+
+// in2
+// in2 * ~address0 * address1
 wire nAddr0_and_addr1;
 wire in2_out;
 `AND(nAddr0_and_addr1, nAddr0, address1);
 `AND(in2_out, in2, nAddr0_and_addr1);
-//
-//// use in3
-//// in3 * address0 * address1
+
+// in3
+// in3 * address0 * address1
 wire addr0_and_addr1;
 wire in3_out;
 `AND(addr0_and_addr1, address0, address1);
 `AND(in3_out, in3, addr0_and_addr1);
 
+// out
+// in0_out + in1_out + in2_out + in3_out
 wire in0_or_in1;
 wire in2_or_in3;
 `OR(in0_or_in1, in0_out, in1_out);
