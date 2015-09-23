@@ -7,6 +7,9 @@
 # Unignore all dirs
 !*/
 
+# Uningnore Makefile
+!Makefile
+
 *.vcd
 *~
 *.swp
