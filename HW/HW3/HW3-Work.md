@@ -1,8 +1,8 @@
 HW3 Work
 ========
 
-![page 1](img/page1.pdf)
+![page 1](img/page1.png)
 
-![page 1](img/page2.pdf)
+![page 2](img/page2.png)
 
-![page 1](img/page3.pdf)
+![page 3](img/page3.png)
