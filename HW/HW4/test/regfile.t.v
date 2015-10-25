@@ -102,6 +102,8 @@ output reg		Clk
     Clk=0;
   end
 
+  integer index;
+
   // Once 'begintest' is asserted, start running test cases
   always @(posedge begintest) begin
     endtest = 0;
@@ -174,6 +176,49 @@ output reg		Clk
       dutpassed = 0;
       $display("Write Enable: BROKEN");
     end
+
+  // Test Case Decoder is broken:
+  // All registers are written to
+  //
+
+  // clear all registers
+  for (index = 1; index < 32; index = index + 1) begin
+    WriteRegister = index;
+    WriteData = 32'd0;
+    RegWrite = 1;
+    ReadRegister1 = 5'd2;
+    ReadRegister2 = 5'd2;
+    #5 Clk=1; #5 Clk=0;
+  end
+
+  // set one register
+  WriteRegister = 5'd1;
+  WriteData = 32'd15;
+  RegWrite = 1;
+  ReadRegister1 = 5'd1;
+  ReadRegister2 = 5'd2;
+  #5 Clk=1; #5 Clk=0;
+
+  // only one register should contain the value
+  if(ReadData1 != 15)
+    begin
+      dutpassed = 0;
+      $display("Decoder: BROKEN");
+    end
+
+  for (index = 2; index < 32; index = index + 1) begin
+    WriteRegister = 5'd0;
+    WriteData = 32'd0;
+    RegWrite = 0;
+    ReadRegister1 = index;
+    #5 Clk=1; #5 Clk=0;
+
+    if(ReadData1 != 0)
+      begin
+        dutpassed = 0;
+        $display("Decoder: BROKEN");
+      end
+  end
 
   // All done!  Wait a moment and signal test completion.
   #5
