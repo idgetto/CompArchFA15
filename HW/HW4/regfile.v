@@ -8,20 +8,40 @@
 
 module regfile
 (
-output[31:0]	ReadData1,	// Contents of first register read
-output[31:0]	ReadData2,	// Contents of second register read
-input[31:0]	WriteData,	// Contents to write to register
-input[4:0]	ReadRegister1,	// Address of first register to read
-input[4:0]	ReadRegister2,	// Address of second register to read
-input[4:0]	WriteRegister,	// Address of register to write
-input		RegWrite,	// Enable writing of register when High
-input		Clk		// Clock (Positive Edge Triggered)
+output[31:0]	ReadData1,	    // Contents of first register read
+output[31:0]	ReadData2,	    // Contents of second register read
+input[31:0]	    WriteData,	    // Contents to write to register
+input[4:0]	    ReadRegister1,	// Address of first register to read
+input[4:0]	    ReadRegister2,	// Address of second register to read
+input[4:0]	    WriteRegister,	// Address of register to write
+input		    RegWrite,	    // Enable writing of register when High
+input		    Clk		        // Clock (Positive Edge Triggered)
 );
 
-  // These two lines are clearly wrong.  They are included to showcase how the 
-  // test harness works. Delete them after you understand the testing process, 
-  // and replace them with your actual code.
-  assign ReadData1 = 42;
-  assign ReadData2 = 42;
+    // decide which register to write to
+    wire[31:0] register_enables;
+    decoder1to32 decoder(register_enables, RegWrite, WriteRegister); 
+
+    // wire up the registers
+    wire[31:0][31:0] register_outputs;
+    genvar index;
+    generate
+        for (index = 1; index < 32;  index = index + 1)
+        begin: WIRE_REGISTERS
+            register32 r(register_outputs[index], 
+                         WriteData, 
+                         register_enables[index],
+                         Clk);
+        end
+    endgenerate
+
+    register32zero zero_register(register_outputs[0], 
+                                 WriteData, 
+                                 register_enables[0],
+                                 Clk);
+
+    // wire the read multiplexors
+    mux32to1by32 read1_mux(ReadData1, ReadRegister1, register_outputs);
+    mux32to1by32 read2_mux(ReadData2, ReadRegister2, register_outputs);
 
 endmodule
