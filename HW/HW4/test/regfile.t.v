@@ -206,7 +206,7 @@ output reg		Clk
       $display("Decoder: BROKEN");
     end
 
-  for (index = 2; index < 32; index = index + 1) begin
+  for (index = 2; dutpassed == 1 && index < 32; index = index + 1) begin
     WriteRegister = 5'd0;
     WriteData = 32'd0;
     RegWrite = 0;
