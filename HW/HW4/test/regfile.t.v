@@ -19,7 +19,7 @@ module hw4testbenchharness();
   wire		dutpassed;	// Indicates whether register file passed tests
 
   // Instantiate the register file being tested.  DUT = Device Under Test
-  regfile DUT
+  broken_port_2_regfile DUT
   (
     .ReadData1(ReadData1),
     .ReadData2(ReadData2),
@@ -248,10 +248,6 @@ output reg		Clk
       dutpassed = 0;
       $display("Zero Register: BROKEN");
     end
-
-  // All done!  Wait a moment and signal test completion.
-  #5
-  endtest = 1;
 
   // Test Case port 2 always reads register 17
   //
