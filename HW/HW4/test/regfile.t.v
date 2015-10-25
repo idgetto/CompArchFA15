@@ -103,6 +103,8 @@ output reg		Clk
   end
 
   integer index;
+  integer firstRead;
+  integer secondRead;
 
   // Once 'begintest' is asserted, start running test cases
   always @(posedge begintest) begin
@@ -251,6 +253,48 @@ output reg		Clk
   #5
   endtest = 1;
 
+  // Test Case port 2 always reads register 17
+  //
+
+  // set register 17 to a known value
+  WriteRegister = 5'd17;
+  WriteData = 32'd5;
+  RegWrite = 1;
+  #5 Clk=1; #5 Clk=0;
+
+  // read from another register with port 2
+  WriteRegister = 5'd1;
+  WriteData = 32'b1;
+  RegWrite = 1;
+  ReadRegister2 = 5'd1;
+  #5 Clk=1; #5 Clk=0;
+
+  firstRead = ReadData2;
+
+  // set register 17 to another value
+  WriteRegister = 5'd17;
+  WriteData = 32'd12;
+  RegWrite = 1;
+  #5 Clk=1; #5 Clk=0;
+
+  // read from another register with port 2
+  WriteRegister = 5'd3;
+  WriteData = 32'd8;
+  RegWrite = 1;
+  ReadRegister2 = 5'd3;
+  #5 Clk=1; #5 Clk=0;
+
+  secondRead = ReadData2;
+
+  if(firstRead == 5 && secondRead == 12)
+    begin
+      dutpassed = 0;
+      $display("Port 2: BROKEN");
+    end
+
+  // All done!  Wait a moment and signal test completion.
+  #5
+  endtest = 1;
 end
 
 endmodule
