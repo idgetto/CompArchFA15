@@ -118,10 +118,15 @@ output reg		Clk
   #5 Clk=1; #5 Clk=0;	// Generate single clock pulse
 
   // Verify expectations and report test result
-  if((ReadData1 != 42) || (ReadData2 != 42)) begin
-    dutpassed = 0;	// Set to 'false' on failure
-    $display("Test Case 1 Failed");
-  end
+  if((ReadData1 == 42) && (ReadData2 == 42)) 
+    begin
+      $display("Test Case 1: PASS");
+    end
+  else
+    begin
+      dutpassed = 0;	// Set to 'false' on failure
+      $display("Test Case 1: FAIL");
+    end
 
   // Test Case 2: 
   //   Write '15' to register 2, verify with Read Ports 1 and 2
@@ -133,11 +138,123 @@ output reg		Clk
   ReadRegister2 = 5'd2;
   #5 Clk=1; #5 Clk=0;
 
-  if((ReadData1 != 15) || (ReadData2 != 15)) begin
-    dutpassed = 0;
-    $display("Test Case 2 Failed");
+  if((ReadData1 == 15) && (ReadData2 == 15)) 
+    begin
+      $display("Test Case 2: PASS");
+    end
+  else
+    begin
+      dutpassed = 0;
+      $display("Test Case 2: FAIL");
+    end
+
+  // Test Case Perfect: 
+  //
+  //
+  WriteRegister = 5'd2;
+  WriteData = 32'd15;
+  RegWrite = 1;
+  ReadRegister1 = 5'd2;
+  ReadRegister2 = 5'd2;
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 == 15) && (ReadData2 == 15)) 
+    begin
+      $display("Test Case Perfect: PASS");
+    end
+  else
+    begin
+      dutpassed = 0;
+      $display("Test Case Perfect: FAIL");
+    end
+
+  // Test Case Write Enable is broken: 
+  //
+  //
+  WriteRegister = 5'd2;
+  WriteData = 32'd15;
+  RegWrite = 1;
+  ReadRegister1 = 5'd2;
+  ReadRegister2 = 5'd2;
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 != 15) || (ReadData2 != 15)) 
+    begin
+      dutpassed = 0;
+      $display("Write Enable: BROKEN");
+    end
   end
 
+  WriteData = 32'd16;
+  RegWrite = 0;
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 != 15) || (ReadData2 != 15)) 
+    begin
+      dutpassed = 0;
+      $display("Write Enable: BROKEN");
+    end
+  end
+
+  // Test Case Decoder is broken:
+  //
+  //
+  WriteRegister = 5'd2;
+  WriteData = 32'd15;
+  RegWrite = 1;
+  ReadRegister1 = 5'd2;
+  ReadRegister2 = 5'd2;
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 == 15) && (ReadData2 == 15)) 
+    begin
+      $display("Test Case Decoder is broken: PASS");
+    end
+  else
+    begin
+      dutpassed = 0;
+      $display("Test Case Decoder is broken: FAIL");
+    end
+
+  // Test Case Register Zero is actually a register:
+  //
+  //
+  WriteRegister = 5'd2;
+  WriteData = 32'd15;
+  RegWrite = 1;
+  ReadRegister1 = 5'd2;
+  ReadRegister2 = 5'd2;
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 == 15) && (ReadData2 == 15)) 
+    begin
+      $display("Test Case Register Zero is actually a register: PASS");
+    end
+  else
+    begin
+      dutpassed = 0;
+      $display("Test Case Register Zero is actually a register: FAIL");
+    end
+
+  // Test Case Port 2 is broken and always reads register 17:
+  //
+  //
+  WriteRegister = 5'd2;
+  WriteData = 32'd15;
+  RegWrite = 1;
+  ReadRegister1 = 5'd2;
+  ReadRegister2 = 5'd2;
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 == 15) && (ReadData2 == 15)) 
+    begin
+      $display("Test Case Register Zero is actually a register: PASS");
+    end
+  else
+    begin
+      dutpassed = 0;
+      $display("Test Case Register Zero is actually a register: FAIL");
+    end
 
   // All done!  Wait a moment and signal test completion.
   #5
