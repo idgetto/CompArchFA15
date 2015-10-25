@@ -10,3 +10,8 @@ test: $(TEST_TARGET)
 
 $(TEST_TARGET): $(TEST_SOURCE) $(SOURCES)
 	iverilog -o $@ $^ -Wall
+
+clean:
+	find $(EXEC_DIR) -type f -exec rm {} +
+
+.PHONY: test clean
