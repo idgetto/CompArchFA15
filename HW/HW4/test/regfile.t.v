@@ -19,7 +19,7 @@ module hw4testbenchharness();
   wire		dutpassed;	// Indicates whether register file passed tests
 
   // Instantiate the register file being tested.  DUT = Device Under Test
-  broken_port_2_regfile DUT
+  regfile DUT
   (
     .ReadData1(ReadData1),
     .ReadData2(ReadData2),
