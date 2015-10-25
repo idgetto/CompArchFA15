@@ -220,6 +220,33 @@ output reg		Clk
       end
   end
 
+  // Test Case zero register is a real register
+  //
+
+  // zero register should initially be zero
+  RegWrite = 0;
+  ReadRegister1 = 5'd0;
+  #5 Clk=1; #5 Clk=0;
+  if(ReadData1 != 0)
+    begin
+      dutpassed = 0;
+      $display("Zero Register: BROKEN");
+    end
+
+  // attempt to set the value of the zero register
+  WriteRegister = 5'd0;
+  WriteData = 32'd1;
+  RegWrite = 1;
+  ReadRegister1 = 5'd0;
+  #5 Clk=1; #5 Clk=0;
+
+  // the zero register should still hold zero
+  if(ReadData1 != 0)
+    begin
+      dutpassed = 0;
+      $display("Zero Register: BROKEN");
+    end
+
   // All done!  Wait a moment and signal test completion.
   #5
   endtest = 1;
