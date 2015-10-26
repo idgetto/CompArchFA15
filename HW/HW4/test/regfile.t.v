@@ -208,7 +208,7 @@ output reg		Clk
       $display("Decoder: BROKEN");
     end
 
-  for (index = 2; dutpassed == 1 && index < 32; index = index + 1) begin
+  for (index = 2; dutpassed && index < 32; index = index + 1) begin
     WriteRegister = 5'd0;
     WriteData = 32'd0;
     RegWrite = 0;
@@ -286,6 +286,39 @@ output reg		Clk
     begin
       dutpassed = 0;
       $display("Port 2: BROKEN");
+    end
+
+  // Test Case Perfect
+  //
+
+  // Write to all registers
+  for (index = 1; dutpassed && index < 32; index = index + 1) begin
+      WriteRegister = index;
+      WriteData = index;
+      RegWrite = 1;
+      #5 Clk=1; #5 Clk=0;
+  end
+
+  // Read from all registers
+  for (index = 1; dutpassed && index < 32; index = index + 1) begin
+      RegWrite = 0;
+      ReadRegister1 = index;
+      ReadRegister2 = index;
+      #5 Clk=1; #5 Clk=0;
+
+      if (index != ReadData1 || index != ReadData2)
+          begin
+            dutpassed = 0;
+          end
+  end
+
+  if (dutpassed)
+    begin
+      $display("Test Case Perfect: PASS");
+    end
+  else
+    begin
+      $display("Test Case Perfect: FAIL");
     end
 
   // All done!  Wait a moment and signal test completion.
