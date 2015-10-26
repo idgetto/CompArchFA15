@@ -21,9 +21,8 @@ input		    Clk		        // Clock (Positive Edge Triggered)
     // decide which register to write to
     wire[31:0] register_enables;
 
-    wire RegWriteBroken;
-    not(RegWriteBroken, RegWrite);
-    decoder1to32 decoder(register_enables, RegWriteBroken, WriteRegister); 
+    // ignore RegWrite and just use 1
+    decoder1to32 decoder(register_enables, 1'b1, WriteRegister); 
 
     // wire up the registers
     wire[31:0][31:0] register_outputs;
