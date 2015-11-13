@@ -5,7 +5,7 @@ This document serves to explain the function of a bike light LED controller.
 
 ### I/O ###
 
-This device takes one input and sends one output. The controller take receives data in the form of a push button. The output of the controller illiminates an LED.
+This device takes one input and sends one output. The controller receives data in the form of a push button. The output of the controller illiminates an LED.
 
 ### Operational Modes ###
 
