@@ -41,9 +41,9 @@ TODO: calculate the size of the up counter
 ##### Sub-Components #####
 
 - 4 Stage Ring Counter
-- 10 Bit Full Adder
+- 10 Bit Binary Counter
 
-#### 10 Bit Full Adder ####
+#### 10 Bit Binary Counter ####
 
 ##### Inputs #####
 
@@ -51,7 +51,7 @@ TODO: calculate the size of the up counter
 
 ##### Schematic #####
 
-![10-bit-adder](img/10-bit-Reset-Binary-Adder.png)
+![10-bit-counter](img/10-bit-binary-counter.png)
 
 ##### Size #####
 
@@ -79,7 +79,7 @@ TODO: calculate the size of the up counter
 
 - DFF
 
-#### 6 Bit Reset Binary Adder ####
+#### 6 Bit Reset Binary Counter ####
 
 ##### Inputs #####
 
@@ -87,7 +87,7 @@ TODO: calculate the size of the up counter
 
 ##### Schematic #####
 
-![6-bit-adder](img/6-bit-Reset-Binary-Adder.png)
+![6-bit-counter](img/6-bit-Reset-Binary-Counter.png)
 
 ##### Size #####
 
