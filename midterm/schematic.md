@@ -13,7 +13,7 @@ Schematic
 
 ##### Schematic #####
 
-![input-conditioner](img/1-bit-Reset-Binary-Adder.svg)
+![input-conditioner](img/1-bit-Reset-Binary-Adder.png)
 
 ##### Size #####
 
@@ -27,7 +27,7 @@ TODO: calculate the size of the up counter
 
 ##### Schematic #####
 
-![10-bit-adder](img/10-bit-Reset-Binary-Adder.svg)
+![10-bit-adder](img/10-bit-Reset-Binary-Adder.png)
 
 ##### Size #####
 
@@ -41,7 +41,7 @@ TODO: calculate the size of the up counter
 
 ##### Schematic #####
 
-![6-bit-adder](img/6-bit-Reset-Binary-Adder.svg)
+![6-bit-adder](img/6-bit-Reset-Binary-Adder.png)
 
 ##### Size #####
 
@@ -55,7 +55,7 @@ TODO: calculate the size of the up counter
 
 ##### Schematic #####
 
-![finite-state-machine](img/FSM.svg)
+![finite-state-machine](img/FSM.png)
 
 ##### Size #####
 
@@ -69,7 +69,7 @@ TODO: calculate the size of the up counter
 
 ##### Schematic #####
 
-![input-conditioner](img/Input-Conditioner.svg)
+![input-conditioner](img/Input-Conditioner.png)
 
 ##### Size #####
 
