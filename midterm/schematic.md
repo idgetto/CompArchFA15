@@ -87,7 +87,7 @@ TODO: calculate the size of the up counter
 
 ##### Schematic #####
 
-![6-bit-counter](img/6-bit-Reset-Binary-Counter.png)
+![6-bit-counter](img/6-bit-reset-binary-counter.png)
 
 ##### Size #####
 
