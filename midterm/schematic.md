@@ -13,7 +13,7 @@ Schematic
 
 ##### Schematic #####
 
-![input-conditioner](img/1-bit-Reset-Binary-Adder.png)
+![1-bit-full-adder](img/1-bit-Full-Adder.png)
 
 ##### Size #####
 
