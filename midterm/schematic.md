@@ -100,7 +100,7 @@ The total size can be found by taking the total size of each component:
 
 | Component        | Number of Inputs | Quantity | Size Each | Component Total |
 |:----------------:|:----------------:|:--------:|:---------:|:---------------:|
-| 1 Bit Full Adder |        1         |    N     |    45     |       45N       |
+| 1 Bit Full Adder |        4         |    N     |    45     |       45N       |
 | Grand Total      |                  |          |           |       45N       |
 
 #### 1 Bit Full Adder ####
