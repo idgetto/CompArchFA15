@@ -3,6 +3,32 @@ Schematic
 
 ![schematic](img/Bike-Light-Expanded-Schematic.png)
 
+##### Inputs #####
+
+The bike light control takes one input from the button.
+
+##### Outputs #####
+
+The system outputs the control value for the LED.
+
+##### Size #####
+
+This component uses the following components:
+- A D Flip Flop with Enable
+- A 7 Bit Reset Binary Counter (described below)
+- An XOR gate
+- An XNOR Gate
+- An AND Gate
+
+The total size can be found by taking the total size of each component:
+
+| Component            | Number of Inputs | Quantity | Size Each | Component Total |
+|:--------------------:|:----------------:|:--------:|:---------:|:---------------:|
+| Clock                |        0         |    1     |    2      |       2         |
+| Input Conditioner    |        1         |    1     |    386    |       386       |
+| Finite State Machine |        2         |    1     |    590    |       590       |
+| Grand Total          |                  |          |           |       978       |
+
 ### Additional Components ###
 
 #### Input Conditioner ####
