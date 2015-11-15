@@ -1,7 +1,7 @@
 Schematic
 =========
 
-![schematic](img/schematic.png)
+![schematic](img/Bike-Light-Expanded-Schematic.png)
 
 ### Additional Components ###
 
