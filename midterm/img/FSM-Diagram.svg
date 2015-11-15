@@ -1,0 +1,207 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1195"
+     height="616">
+    <defs/>
+    <g transform=" translate(-507.2,-347.2)">
+        <ellipse cx="927" cy="431" rx="79.2" ry="79.2" fill="none"
+                 stroke="#000000" stroke-width="1.6" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" text-anchor="middle"
+           font-size="19px">
+            <text x="926.95" y="426.15">
+                Mode 0
+            </text>
+            <text x="926.95" y="448.55">
+                (off)
+            </text>
+        </g>
+        <ellipse cx="1295" cy="431" rx="79.2" ry="79.2" fill="none"
+                 stroke="#000000" stroke-width="1.6" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" text-anchor="middle"
+           font-size="19px">
+            <text x="1294.95" y="426.15">
+                Mode 1
+            </text>
+            <text x="1294.95" y="448.55">
+                (on)
+            </text>
+        </g>
+        <ellipse cx="1535" cy="655" rx="79.2" ry="79.2" fill="none"
+                 stroke="#000000" stroke-width="1.6" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" text-anchor="middle"
+           font-size="19px">
+            <text x="1534.95" y="650.15">
+                Mode 2
+            </text>
+            <text x="1534.95" y="672.55">
+                (off)
+            </text>
+        </g>
+        <ellipse cx="1295" cy="879" rx="79.2" ry="79.2" fill="none"
+                 stroke="#000000" stroke-width="1.6" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" text-anchor="middle"
+           font-size="19px">
+            <text x="1294.95" y="874.15">
+                Mode 2
+            </text>
+            <text x="1294.95" y="896.55">
+                (on)
+            </text>
+        </g>
+        <ellipse cx="927" cy="879" rx="79.2" ry="79.2" fill="none"
+                 stroke="#000000" stroke-width="1.6" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" text-anchor="middle"
+           font-size="19px">
+            <text x="926.95" y="874.15">
+                Mode 3
+            </text>
+            <text x="926.95" y="896.55">
+                (off)
+            </text>
+        </g>
+        <ellipse cx="687" cy="655" rx="79.2" ry="79.2" fill="none"
+                 stroke="#000000" stroke-width="1.6" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" text-anchor="middle"
+           font-size="19px">
+            <text x="686.95" y="650.15">
+                Mode 3
+            </text>
+            <text x="686.95" y="672.55">
+                (on)
+            </text>
+        </g>
+        <path d="M 848 879 L 704 879 Q 688 879 688 863 L 688 768" fill="none"
+              stroke="#000000" stroke-width="3.2" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 687 576 L 687 450 Q 687 434 703 434 L 816 434" fill="none"
+              stroke="#000000" stroke-width="3.2" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 1006 431 L 1152 431 Q 1168 431 1176 431 L 1184 431"
+              fill="none" stroke="#000000" stroke-width="3.2"
+              stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1374 431 L 1520 431 Q 1536 431 1536 447 L 1536 544"
+              fill="none" stroke="#000000" stroke-width="3.2"
+              stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1535 734 L 1535 862 Q 1535 878 1519 878 L 1440 878 Q 1424 878 1416 878 L 1408 878"
+              fill="none" stroke="#000000" stroke-width="3.2"
+              stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1424 656 L 1416 656 Q 1408 656 1392 656 L 1311 656 Q 1295 656 1295 672 L 1295 800"
+              fill="none" stroke="#000000" stroke-width="3.2"
+              stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 766 655 L 912 655 Q 928 655 928 671 L 928 768" fill="none"
+              stroke="#000000" stroke-width="3.2" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 1040 880 L 1104 880 Q 1120 880 1136 879.83 L 1216 879"
+              fill="none" stroke="#000000" stroke-width="3.2"
+              stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="1056" y="368" width="128" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="1059.2" y="414.4">
+                Button Press
+            </text>
+        </g>
+        <rect x="1072" y="816" width="128" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="1075.2" y="862.4">
+                Button Press
+            </text>
+        </g>
+        <rect x="1536" y="368" width="128" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="1539.2" y="414.4">
+                Button Press
+            </text>
+        </g>
+        <rect x="560" y="368" width="128" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="563.2" y="414.4">
+                Button Press
+            </text>
+        </g>
+        <path d="M 672 736 L 704 752 L 672 768 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              transform="rotate(270,688,752)" pointer-events="none"/>
+        <path d="M 687 736 L 687 734" fill="none" stroke="#000000"
+              stroke-width="3.2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 912 768 L 944 784 L 912 800 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              transform="translate(928,0)scale(-1,1)translate(-928,0)rotate(-270,928,784)"
+              pointer-events="none"/>
+        <path d="M 927 800 L 927 800" fill="none" stroke="#000000"
+              stroke-width="3.2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1008 864 L 1040 880 L 1008 896 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              transform="translate(1024,0)scale(-1,1)translate(-1024,0)"
+              pointer-events="none"/>
+        <path d="M 1008 880 L 1007 880 Q 1006 880 1006 879.5 L 1006 879"
+              fill="none" stroke="#000000" stroke-width="3.2"
+              stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1520 544 L 1552 560 L 1520 576 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              transform="rotate(450,1536,560)" pointer-events="none"/>
+        <path d="M 1424 640 L 1456 656 L 1424 672 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 1456 655 L 1456 655" fill="none" stroke="#000000"
+              stroke-width="3.2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1376 864 L 1408 880 L 1376 896 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              transform="translate(1392,0)scale(-1,1)translate(-1392,0)"
+              pointer-events="none"/>
+        <path d="M 1376 880 L 1375 880 Q 1374 880 1374 879.5 L 1374 879"
+              fill="none" stroke="#000000" stroke-width="3.2"
+              stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 816 416 L 848 432 L 816 448 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 848 431 L 848 431" fill="none" stroke="#000000"
+              stroke-width="3.2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1184 416 L 1216 432 L 1184 448 Z" fill="#efd3d2"
+              stroke="#000000" stroke-width="1.6" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 1216 431 L 1216 431" fill="none" stroke="#000000"
+              stroke-width="3.2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1535 576 L 1535 576" fill="none" stroke="#000000"
+              stroke-width="3.2" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="1552" y="816" width="128" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="1555.2" y="862.4">
+                Count[MSB] = 1
+            </text>
+        </g>
+        <rect x="1216" y="592" width="160" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="1219.2" y="638.4">
+                Count[MSB] = 0
+            </text>
+        </g>
+        <rect x="512" y="816" width="160" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="515.2" y="862.4">
+                Count[LSB] = 1
+            </text>
+        </g>
+        <rect x="832" y="592" width="160" height="80" rx="12" ry="12"
+              fill="none" stroke="none" pointer-events="none"/>
+        <g fill="#000" font-family="Arial,Helvetica" font-weight="bold"
+           font-size="19px">
+            <text x="835.2" y="638.4">
+                Count[LSB] = 0
+            </text>
+        </g>
+    </g>
+</svg>
