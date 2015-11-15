@@ -35,11 +35,11 @@ The total size can be found by taking the total size of each component:
 | Component                  | Number of Inputs | Quantity | Size Each | Component Total |
 |:--------------------------:|:----------------:|:--------:|:---------:|:---------------:|
 | D Flip Flop with Enable    |        4         |    1     |    20     |       20        |
-| 7 Bit Reset Binary Counter |        2         |    1     |    344    |       344       |
+| 7 Bit Reset Binary Counter |        2         |    1     |    358    |       358       |
 | XOR Gate                   |        2         |    1     |    3      |       3         |
 | XNOR Gate                  |        2         |    1     |    2      |       2         |
 | AND Gate                   |        2         |    1     |    3      |       3         |
-| Grand Total                |                  |          |           |       373       |
+| Grand Total                |                  |          |           |       386       |
 
 #### Finite State Machine ####
 
@@ -75,33 +75,33 @@ The total size can be found by taking the total size of each component:
 | AND Gate              |        2         |    2     |    3      |       6         |
 | Grand Total           |                  |          |           |       590       |
 
-#### 11 Bit Binary Counter ####
+#### N Bit Binary Counter ####
 
-The 11 Bit Binary Counter is able to count up to large numbers. By incrementing the counter at every clock cycle, we can use it to control the blinking of the LED. Because this counter can count up to 2^11 and the clock cycle is 32,768 Hz, we will be able to set the blinking frequency of the bike light to 16 Hz.
+The N Bit Binary Counter is able to count up to large numbers. By incrementing the counter at every clock cycle, we can use it to control the blinking of the LED.
 
 ##### Inputs #####
 
-The 11 Bit Binary Counter only takes the clock as input.
+The N Bit Binary Counter only takes the clock as input.
 
 ##### Outputs #####
 
-The component outputs a binary number of width 11, representing the current value of the count.
+The component outputs a binary number of width N, representing the current value of the count.
 
 ##### Schematic #####
 
-![11-bit-counter](img/11-bit-binary-counter.png)
+![N-Bit-Binary-Counter](img/N-Bit-Binary-Counter.png)
 
 ##### Size #####
 
 This component uses the following components:
-- 11 One Bit Full Adders (described below)
+- N One Bit Full Adders (described below)
 
 The total size can be found by taking the total size of each component:
 
 | Component        | Number of Inputs | Quantity | Size Each | Component Total |
 |:----------------:|:----------------:|:--------:|:---------:|:---------------:|
-| 1 Bit Full Adder |        1         |    11    |    45     |       495       |
-| Grand Total      |                  |          |           |       495       |
+| 1 Bit Full Adder |        1         |    N     |    45     |       45N       |
+| Grand Total      |                  |          |           |       45N       |
 
 #### 1 Bit Full Adder ####
 
@@ -137,9 +137,9 @@ The total size can be found by taking the total size of each component:
 | OR Gate     |        2         |     2    |    3      |       6         |
 | Grand Total |                  |          |           |       45        |
 
-#### 7 Bit Reset Binary Counter ####
+#### N Bit Reset Binary Counter ####
 
-This is a clocked component able to count up to (2^7)-1. It is also resetable by sending a high signal to the reset pin. 
+This is a clocked component able to count up to (2^N)-1. It is also resetable by sending a high signal to the reset pin. 
 
 ##### Inputs #####
 
@@ -147,25 +147,25 @@ This component takes the clock as input and a reset signal, which causes the cou
 
 ##### Outputs #####
 
-The counter outputs a binary number of width 7, indicating the current count.
+The counter outputs a binary number of width N, indicating the current count.
 
 ##### Schematic #####
 
-![7-bit-counter](img/7-bit-reset-binary-counter.png)
+![N-Bit-Reset-Binary-Counter](img/N-Bit-Reset-Binary-Counter.png)
 
 ##### Size #####
 
 This component uses the following components:
-- 7 One Bit Full Adders
-- 14 AND Gates
+- N One Bit Full Adders
+- 2N AND Gates
 - 1 NOT Gate
 
 The total size can be found by taking the total size of each component:
 
 | Component          | Number of Inputs | Quantity | Size Each | Component Total |
 |:------------------:|:----------------:|:--------:|:---------:|:---------------:|
-| One Bit Full Adder |        4         |     7    |    45     |       315       |
-| AND Gate           |        2         |     14   |    3      |       28        |
+| One Bit Full Adder |        4         |     N    |    45     |       45N       |
+| AND Gate           |        2         |     2N   |    3      |       6N        |
 | NOT Gate           |        1         |     1    |    1      |       1         |
-| Grand Total        |                  |          |           |       344       |
+| Grand Total        |                  |          |           |       51N+1     |
 
