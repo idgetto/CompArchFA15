@@ -1,6 +1,12 @@
 Schematic
 =========
 
+### Block Diagram ###
+
+![block-diagram](img/Bike-Light-Schematic-Block.png)
+
+### Expanded Block Diagram ###
+
 ![schematic](img/Bike-Light-Expanded-Schematic.png)
 
 ##### Inputs #####
