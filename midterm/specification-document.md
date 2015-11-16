@@ -39,8 +39,6 @@ In this mode the bike light is on at 50% brightness.
 
 The previous timing diagrams used a clock speed of 64 Hz. This was simply to make the timing diagrams smaller and easier to interpret. A real implementation of this bike light controller should use a clock speed much faster than the human visual system can process.
 
-TODO: Put images of each mode here
-
 #### Finite State Machine ####
 
 This finite state machine describes the states in which the controller can operate and the signals that cause a change of state.
@@ -49,6 +47,6 @@ This finite state machine describes the states in which the controller can opera
 
 ### Measurements ###
 
-TODO: Think of measurements to put here
-- blinking frequency
-- input conditioner timing
+The bike light flashes at a rapid pace of 16 Hz. This will surely catch the attention of distracted drivers.
+
+In order to ensure that the bike light is easy to operate and does what the user intends, there is a input conditioner to debounce button presses. This input conditioner require the user to input a consistent button press for at least 1.9 milliseconds.
