@@ -9,6 +9,7 @@ Schematic
 
 ![schematic](img/Bike-Light-Expanded-Schematic.png)
 
+
 ##### Inputs #####
 
 The bike light control takes one input from the button.
