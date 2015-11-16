@@ -1,6 +1,8 @@
 Specification Document
 ======================
 
+![basic-schematic](img/Bike-Light-Schematic-Basic.png)
+
 This document serves to specify the behavior of a bike light LED controller.
 
 ### I/O ###
