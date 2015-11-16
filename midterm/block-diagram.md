@@ -1,4 +1,4 @@
 Block Diagram
 =============
 
-![block-diagram](img/block-diagram.png)
+![block-diagram](img/Bike-Light-Schematic-Block.png)
